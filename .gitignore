@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+.env*
+!.env.example
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Local editor data for npm run dev (the live site uses Vercel Blob)
+.local-data/
+.vercel

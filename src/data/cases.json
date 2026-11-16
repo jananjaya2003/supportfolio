@@ -1,0 +1,1662 @@
+[
+  {
+    "id": "01",
+    "title": "Windows PC Not Booting",
+    "category": "Windows",
+    "iconName": "HardDrive",
+    "emoji": "🔌",
+    "difficulty": "Intermediate",
+    "device": "Windows PC",
+    "time": "30–60 min",
+    "description": "A workstation fails to start or cannot reach the Windows sign-in screen.",
+    "problem": "The Windows workstation does not complete startup and the user cannot access their desktop.",
+    "symptoms": [
+      "No power, no display, or a manufacturer logo with no progress",
+      "Windows reports a boot-device error or repeatedly restarts",
+      "Startup Repair appears or the device remains on a blank screen"
+    ],
+    "causes": [
+      "Power, battery, dock, or peripheral fault",
+      "Incorrect boot order or an undetected storage device",
+      "Corrupted boot files or a failed recent update",
+      "Storage or other hardware failure"
+    ],
+    "steps": [
+      [
+        "Confirm power and isolate peripherals",
+        "Ask what changed, check the outlet, power adapter, indicator lights, and battery. Disconnect docks and nonessential USB devices, then try a known-good charger if available."
+      ],
+      [
+        "Observe and record the startup behavior",
+        "Note beep or LED codes, error messages, and whether the firmware logo appears. Check the manufacturer’s documented diagnostics; do not repeatedly force power-off."
+      ],
+      [
+        "Check firmware and storage detection",
+        "If authorized, enter UEFI/BIOS and confirm the internal drive is detected and the expected boot entry is selected. Do not change security or storage-mode settings without approval."
+      ],
+      [
+        "Use approved Windows recovery",
+        "If the drive is detected, try Windows Recovery Environment Startup Repair. Consider Safe Mode or a recent restore point only in line with backup, encryption, and organization policies."
+      ],
+      [
+        "Escalate suspected hardware or data risk",
+        "If diagnostics indicate a drive fault, unusual noises occur, or recovery risks data, stop and escalate to endpoint support before reinstalling or replacing parts."
+      ]
+    ],
+    "root": "A failed storage device or damaged boot configuration prevented Windows from loading. Confirm the actual cause from diagnostics; do not assume a software fault.",
+    "resolution": "Restore the correct boot entry or use approved startup repair when hardware is healthy. Arrange authorized drive repair/replacement and data recovery if diagnostics report a hardware fault.",
+    "verification": [
+      "Restart to the normal Windows sign-in screen",
+      "Sign in and check the user’s important files and required apps",
+      "Confirm the startup error does not recur"
+    ],
+    "prevention": [
+      "Keep endpoint backups and recovery keys current",
+      "Apply firmware and Windows updates through managed channels",
+      "Report recurring startup errors early"
+    ],
+    "tools": [
+      "UEFI/BIOS diagnostics",
+      "Windows Recovery Environment",
+      "OEM hardware diagnostics",
+      "Endpoint management console"
+    ],
+    "skills": [
+      "Windows recovery",
+      "Hardware triage",
+      "Data protection"
+    ],
+    "tree": [
+      [
+        "Does the device power on?",
+        "No: verify outlet, adapter, dock, and battery; if still unpowered, escalate for hardware service. Yes: continue to startup observations."
+      ],
+      [
+        "Is the internal drive detected in firmware?",
+        "No: stop repeated boot attempts and escalate for storage diagnostics and data-safe repair. Yes: use approved Windows recovery."
+      ],
+      [
+        "Does Startup Repair restore boot?",
+        "Yes: verify normal startup and back up important data. No: preserve data and escalate before reset or reimage."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "02",
+    "title": "Blue Screen of Death (BSOD)",
+    "category": "Windows",
+    "iconName": "Activity",
+    "emoji": "⚡",
+    "difficulty": "Advanced",
+    "device": "Windows PC",
+    "time": "30–90 min",
+    "description": "A stop error interrupts work and may restart the computer unexpectedly.",
+    "problem": "Windows stops with a bug-check screen, causing a restart or preventing normal use.",
+    "symptoms": [
+      "Blue stop screen with a stop code or QR code",
+      "Unexpected restart, possibly during a particular task",
+      "Repeated crashes after a driver, update, or hardware change"
+    ],
+    "causes": [
+      "Incompatible or faulty device driver",
+      "Corrupted system files or problematic update",
+      "Unstable memory, storage, overheating, or other hardware",
+      "Low disk space or third-party software conflict"
+    ],
+    "steps": [
+      [
+        "Capture the stop code and context",
+        "Photograph or record the stop code, time, recent changes, attached hardware, and what the user was doing. Check whether the crash repeats."
+      ],
+      [
+        "Check managed health and crash history",
+        "Review Reliability Monitor, Windows Update history, and approved endpoint-management alerts. Inspect minidumps only if authorized."
+      ],
+      [
+        "Test a recent change",
+        "If a specific driver, peripheral, or update immediately preceded the issue, follow the approved rollback or vendor remediation process."
+      ],
+      [
+        "Run supported system checks",
+        "Use organization-approved diagnostics and Windows system-file or memory checks. Check temperatures and disk health with OEM tools; avoid unapproved registry cleaners."
+      ],
+      [
+        "Escalate recurring or hardware-related crashes",
+        "Preserve diagnostic evidence and send repeated bug checks, suspected memory/storage faults, or encrypted-device issues to endpoint engineering."
+      ]
+    ],
+    "root": "A driver or hardware component triggered a Windows bug check; the stop code and crash evidence identify the specific cause.",
+    "resolution": "Apply the verified driver/update fix or remove the confirmed faulty peripheral. If a hardware diagnostic fails, arrange authorized repair and restore the device from a known-good backup if required.",
+    "verification": [
+      "Use the computer normally and repeat the activity that previously triggered the crash",
+      "Confirm no new stop errors or related health alerts",
+      "Check with the user after a reasonable observation period"
+    ],
+    "prevention": [
+      "Deploy signed, validated drivers through managed updates",
+      "Review crash trends rather than repeatedly reimaging",
+      "Keep backups current and ensure adequate cooling"
+    ],
+    "tools": [
+      "Reliability Monitor",
+      "Event Viewer",
+      "OEM diagnostics",
+      "Endpoint management"
+    ],
+    "skills": [
+      "Windows diagnostics",
+      "Driver triage",
+      "Incident documentation"
+    ],
+    "tree": [
+      [
+        "Does the stop code repeat?",
+        "No: document a one-time event and monitor. Yes: capture the exact code and continue."
+      ],
+      [
+        "Did a recent managed change precede the crash?",
+        "Yes: evaluate a supported rollback or update. No: run approved system and hardware diagnostics."
+      ],
+      [
+        "Do hardware diagnostics fail?",
+        "Yes: stop software remediation and escalate for repair. No: apply evidence-based driver or OS remediation and verify."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "03",
+    "title": "Laptop Running Extremely Slow",
+    "category": "Windows",
+    "iconName": "Laptop",
+    "emoji": "🐢",
+    "difficulty": "Intermediate",
+    "device": "Windows laptop",
+    "time": "20–45 min",
+    "description": "Slow sign-in, sluggish apps, or high resource use is affecting productivity.",
+    "problem": "The laptop responds slowly enough to prevent the user from working efficiently.",
+    "symptoms": [
+      "Long boot or sign-in time",
+      "Apps freeze or take a long time to open",
+      "High CPU, memory, disk, or network activity"
+    ],
+    "causes": [
+      "Resource-heavy process, too many startup apps, or low free storage",
+      "Pending updates, security scan, or sync operation",
+      "Aging hardware, overheating, or storage degradation",
+      "Malware or an unhealthy user profile"
+    ],
+    "steps": [
+      [
+        "Clarify when the slowdown happens",
+        "Ask when it began, whether it affects all apps, whether it follows the user across devices, and what changed recently."
+      ],
+      [
+        "Check resource use and device health",
+        "Use Task Manager and managed endpoint health reports to identify sustained CPU, memory, disk, or network pressure. Note the process and duration."
+      ],
+      [
+        "Check storage, updates, and temperature",
+        "Review available storage, pending managed updates, fan/ventilation, and OEM health alerts. Avoid deleting user data to free space."
+      ],
+      [
+        "Isolate the cause safely",
+        "Close an identified nonessential app with the user’s permission, test another network or known-good profile where approved, and run the managed security scan."
+      ],
+      [
+        "Apply supported remediation or escalate",
+        "Use approved app updates, startup configuration, storage cleanup, or hardware service. Escalate persistent high resource use or potential security findings."
+      ]
+    ],
+    "root": "A sustained resource bottleneck—often a resource-heavy process, constrained storage, or failing hardware—was slowing the laptop.",
+    "resolution": "Resolve the evidenced bottleneck using approved software updates, managed storage cleanup, or hardware service; remove software only with the user and IT change process.",
+    "verification": [
+      "Compare sign-in and app response with the original report",
+      "Confirm resource use has returned to expected levels",
+      "Ask the user to complete their normal workflow"
+    ],
+    "prevention": [
+      "Review device health and storage capacity regularly",
+      "Limit unnecessary approved startup applications",
+      "Keep endpoints updated and vents unobstructed"
+    ],
+    "tools": [
+      "Task Manager",
+      "Reliability Monitor",
+      "Endpoint management",
+      "OEM diagnostics"
+    ],
+    "skills": [
+      "Performance troubleshooting",
+      "Windows administration",
+      "User communication"
+    ],
+    "tree": [
+      [
+        "Is the slowdown limited to one app?",
+        "Yes: inspect that app’s health, updates, and profile; involve its service owner if needed. No: review system-wide resource use."
+      ],
+      [
+        "Is one resource consistently saturated?",
+        "Yes: identify the responsible managed process and remediate safely. No: check storage, updates, and hardware health."
+      ],
+      [
+        "Do diagnostics suggest a hardware or security issue?",
+        "Yes: preserve evidence and escalate. No: make one supported change at a time and retest."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "04",
+    "title": "Outlook Not Sending or Receiving Emails",
+    "category": "Microsoft 365",
+    "iconName": "Mail",
+    "emoji": "✉️",
+    "difficulty": "Intermediate",
+    "device": "Outlook / Exchange Online",
+    "time": "20–40 min",
+    "description": "Messages are stuck in the Outbox or new email is not arriving.",
+    "problem": "Outlook cannot send or receive messages as expected.",
+    "symptoms": [
+      "Messages remain in the Outbox",
+      "Outlook shows disconnected or prompts repeatedly for credentials",
+      "New mail appears in webmail but not the desktop app"
+    ],
+    "causes": [
+      "Network connectivity or service incident",
+      "Incorrect offline mode, mailbox quota, or large attachment",
+      "Authentication, profile, or add-in issue",
+      "Incorrect mail configuration or a delivery restriction"
+    ],
+    "steps": [
+      [
+        "Scope the impact",
+        "Ask whether the issue affects one sender, recipient, device, or all users. Check Microsoft 365 service health using an authorized admin account."
+      ],
+      [
+        "Test the service and connection",
+        "Confirm the user has working network access and compare Outlook with Outlook on the web. Check for a service incident before changing the profile."
+      ],
+      [
+        "Inspect the Outbox and mailbox",
+        "Check Work Offline, message size, recipient address, mailbox quota, and any non-delivery report. Do not remove messages without the user’s consent."
+      ],
+      [
+        "Check authentication and client health",
+        "Confirm the user can authenticate through the approved sign-in flow. Restart Outlook and test with add-ins disabled or a new profile only under support policy."
+      ],
+      [
+        "Escalate delivery or tenant issues",
+        "Capture timestamps, affected addresses, NDR codes, and client version; route message-trace or policy issues to the Microsoft 365 administrator."
+      ]
+    ],
+    "root": "The desktop Outlook client was disconnected or held a message because of an oversized attachment or stale client state.",
+    "resolution": "Restore the client connection, correct the message or attachment issue, and use the approved account sign-in flow. Escalate tenant delivery rules or service health issues to the messaging team.",
+    "verification": [
+      "Send a small test message to an approved test mailbox",
+      "Confirm inbound mail arrives in both Outlook and webmail",
+      "Verify the original message status with the user"
+    ],
+    "prevention": [
+      "Use approved cloud links for large files",
+      "Monitor mailbox storage and service-health notices",
+      "Keep Outlook and Microsoft 365 apps updated"
+    ],
+    "tools": [
+      "Outlook",
+      "Outlook on the web",
+      "Microsoft 365 service health",
+      "Message trace (admin)"
+    ],
+    "skills": [
+      "Microsoft 365 support",
+      "Email diagnostics",
+      "Identity triage"
+    ],
+    "tree": [
+      [
+        "Does Outlook on the web work?",
+        "No: check service health, network, and mailbox policies; escalate tenant issues. Yes: investigate the desktop client."
+      ],
+      [
+        "Is the message still in the Outbox?",
+        "Yes: check connection state, attachment size, and recipient details before retrying. No: check delivery report and message trace."
+      ],
+      [
+        "Does restarting or repairing the client resolve it?",
+        "Yes: send and receive a test message. No: collect client evidence and escalate profile or tenant issues."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "05",
+    "title": "Microsoft Teams Not Opening",
+    "category": "Microsoft 365",
+    "iconName": "Command",
+    "emoji": "👥",
+    "difficulty": "Easy",
+    "device": "Microsoft Teams",
+    "time": "15–30 min",
+    "description": "Teams fails to launch, freezes on startup, or displays a sign-in error.",
+    "problem": "The user cannot open Teams or reach their workspace.",
+    "symptoms": [
+      "App spins, freezes, or closes during launch",
+      "Repeated sign-in prompts or an error message",
+      "Teams web app works while desktop app does not"
+    ],
+    "causes": [
+      "Service incident or network/proxy restriction",
+      "Stale sign-in token or client update issue",
+      "Damaged local app cache",
+      "Device resource or policy restriction"
+    ],
+    "steps": [
+      [
+        "Establish scope and check service health",
+        "Check whether the issue affects one user or multiple users and review Microsoft 365 service health."
+      ],
+      [
+        "Test connectivity and the web client",
+        "Confirm other Microsoft 365 services work and test Teams in the supported browser. Note any conditional-access or sign-in error."
+      ],
+      [
+        "Restart and update the client",
+        "Fully quit Teams, restart the device if practical, and install updates through the organization’s approved software channel."
+      ],
+      [
+        "Repair the app using managed guidance",
+        "Use the supported Windows app repair/reset procedure. Only clear app data or cache when authorized, explaining that a sign-in may be required again."
+      ],
+      [
+        "Escalate identity or service issues",
+        "Record the exact error, time, app version, and correlation ID where shown; route access-policy and tenant issues to the responsible administrator."
+      ]
+    ],
+    "root": "A stale client state or sign-in token prevented the desktop app from completing startup.",
+    "resolution": "Update or repair Teams through the managed app process and complete the approved sign-in flow. Escalate service, identity, or access-policy errors with their correlation details.",
+    "verification": [
+      "Launch Teams successfully and confirm the correct account",
+      "Test chat, meeting join, and audio device selection as relevant",
+      "Confirm the issue remains resolved after restarting Teams"
+    ],
+    "prevention": [
+      "Keep Teams updated through managed deployment",
+      "Use the supported sign-in process and approved network",
+      "Check service health before local troubleshooting"
+    ],
+    "tools": [
+      "Microsoft Teams",
+      "Teams web app",
+      "Microsoft 365 service health",
+      "Company Portal"
+    ],
+    "skills": [
+      "Microsoft 365 support",
+      "App troubleshooting",
+      "Identity support"
+    ],
+    "tree": [
+      [
+        "Does Teams work in the browser?",
+        "No: check service health, network, and account access. Yes: focus on the desktop client."
+      ],
+      [
+        "Is an explicit sign-in or policy error shown?",
+        "Yes: capture the message and route to identity administration. No: restart and update the client."
+      ],
+      [
+        "Does managed app repair resolve startup?",
+        "Yes: sign in and verify core functions. No: capture app version and logs for escalation."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "06",
+    "title": "Wi-Fi Keeps Disconnecting",
+    "category": "Networking",
+    "iconName": "Wifi",
+    "emoji": "📶",
+    "difficulty": "Intermediate",
+    "device": "Laptop / Wi-Fi",
+    "time": "20–40 min",
+    "description": "Wireless drops repeatedly, disrupting calls, browsing, and access to work.",
+    "problem": "A device repeatedly loses its wireless connection during use.",
+    "symptoms": [
+      "Wi-Fi icon disconnects or reconnects frequently",
+      "Calls or downloads pause when moving between areas",
+      "Other nearby users may or may not be affected"
+    ],
+    "causes": [
+      "Weak signal, interference, or access-point roaming",
+      "Wireless adapter driver or power-management issue",
+      "Access-point outage or capacity problem",
+      "Network authentication or DHCP lease issue"
+    ],
+    "steps": [
+      [
+        "Map the scope and location",
+        "Ask when and where drops occur, whether other users are affected, and whether wired access is stable. Record timestamps."
+      ],
+      [
+        "Check signal and access-point health",
+        "Compare signal in the affected location and check approved Wi-Fi controller or service-health information with the network team."
+      ],
+      [
+        "Compare another device or network",
+        "Use a known-good managed device or approved network to distinguish a device-specific issue from a site-wide issue."
+      ],
+      [
+        "Inspect adapter and authentication state",
+        "Review Windows WLAN events and adapter health. Check managed driver and power settings; do not disable enterprise security or join an unapproved network."
+      ],
+      [
+        "Escalate with evidence",
+        "Provide affected location, SSID, device identifier, timestamps, and comparison results to network operations."
+      ]
+    ],
+    "root": "Weak or unstable coverage in the user’s work area caused the device to roam or lose its access point.",
+    "resolution": "Network operations adjusted coverage or access-point configuration for the affected area; the user tested from the same location.",
+    "verification": [
+      "Maintain a connection at the affected location",
+      "Repeat a previously interrupted work task or call",
+      "Monitor for repeated drops during a normal work period"
+    ],
+    "prevention": [
+      "Report dead zones with location and time details",
+      "Keep managed wireless drivers current",
+      "Avoid unapproved personal hotspots for company work"
+    ],
+    "tools": [
+      "Windows WLAN report",
+      "Wi-Fi controller (authorized)",
+      "Device Manager",
+      "Network monitoring"
+    ],
+    "skills": [
+      "Wireless triage",
+      "Network diagnostics",
+      "Escalation"
+    ],
+    "tree": [
+      [
+        "Are other users in the same location affected?",
+        "Yes: check for access-point or site coverage issues with network operations. No: inspect the individual device."
+      ],
+      [
+        "Does the device stay connected near an access point?",
+        "Yes: investigate coverage, roaming, or interference in the problem area. No: check adapter, driver, and authentication."
+      ],
+      [
+        "Does a managed driver update resolve it?",
+        "Yes: retest at the affected location. No: provide WLAN evidence and timestamps to network support."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "07",
+    "title": "No Internet Access After Connecting Wi-Fi",
+    "category": "Networking",
+    "iconName": "Network",
+    "emoji": "🌐",
+    "difficulty": "Intermediate",
+    "device": "Windows / Network",
+    "time": "15–35 min",
+    "description": "The device connects to Wi-Fi but cannot reach internet or work services.",
+    "problem": "A wireless connection appears established, but the user cannot access internet resources.",
+    "symptoms": [
+      "Connected status with a 'No internet' indicator",
+      "Some sites or company applications time out",
+      "Other devices may have working internet on the same network"
+    ],
+    "causes": [
+      "DHCP address, gateway, or DNS resolution problem",
+      "Captive portal or authentication not completed",
+      "Proxy, VPN, or firewall routing issue",
+      "ISP, access point, or upstream network outage"
+    ],
+    "steps": [
+      [
+        "Identify the affected network and scope",
+        "Confirm the SSID, affected apps, whether colleagues are affected, and whether a VPN is connected. Avoid sharing credentials over chat."
+      ],
+      [
+        "Check address and gateway state",
+        "Review the device’s IP configuration and confirm it has a valid address and default gateway. Do not expose network details publicly."
+      ],
+      [
+        "Separate DNS from connectivity",
+        "Test approved internal and external destinations using standard diagnostics. Note name-resolution versus general connectivity errors."
+      ],
+      [
+        "Check VPN, proxy, and portal state",
+        "Follow organization guidance for VPN and proxy state. Complete any legitimate guest portal sign-in; never bypass corporate controls."
+      ],
+      [
+        "Escalate upstream issues",
+        "If multiple users or the gateway are affected, send location, SSID, timestamps, and test results to network operations."
+      ]
+    ],
+    "root": "The connection had no usable DNS resolution or upstream gateway route, even though Wi-Fi association succeeded.",
+    "resolution": "Restore the correct managed network configuration or have network operations resolve the DNS/gateway issue. Reconnect to the approved SSID after the change.",
+    "verification": [
+      "Open an approved internal resource and external site",
+      "Confirm name resolution and connection are stable",
+      "Verify VPN and protected applications work as expected"
+    ],
+    "prevention": [
+      "Use only approved wireless networks",
+      "Report site-wide connectivity issues promptly",
+      "Keep VPN and proxy configuration managed"
+    ],
+    "tools": [
+      "Windows network diagnostics",
+      "ipconfig",
+      "nslookup",
+      "Network monitoring"
+    ],
+    "skills": [
+      "TCP/IP troubleshooting",
+      "DNS triage",
+      "Network escalation"
+    ],
+    "tree": [
+      [
+        "Does the device have a valid address and gateway?",
+        "No: investigate DHCP or access-point assignment. Yes: test name resolution and route."
+      ],
+      [
+        "Can it reach an approved destination by address but not name?",
+        "Yes: investigate DNS configuration. No: check gateway, VPN, proxy, and upstream routing."
+      ],
+      [
+        "Are multiple users affected?",
+        "Yes: escalate as a network incident with location and time. No: continue device-specific managed diagnostics."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "08",
+    "title": "Printer Offline Issue",
+    "category": "Printers",
+    "iconName": "Printer",
+    "emoji": "🖨️",
+    "difficulty": "Easy",
+    "device": "Network printer",
+    "time": "15–30 min",
+    "description": "A shared or local printer appears offline and cannot accept print jobs.",
+    "problem": "A printer is shown as offline even though the user expects it to be available.",
+    "symptoms": [
+      "Printer queue reports Offline",
+      "Print jobs pause or show unavailable status",
+      "Colleagues may still be able to print"
+    ],
+    "causes": [
+      "Printer is powered off, asleep, or disconnected",
+      "Network address changed or printer is unreachable",
+      "Stale queue status or incorrect default printer",
+      "Print server or driver issue"
+    ],
+    "steps": [
+      [
+        "Confirm the printer and impact",
+        "Verify the printer name/location, whether other users are affected, and whether the device is shared or locally connected."
+      ],
+      [
+        "Check physical and panel status",
+        "Confirm power, paper, display warnings, and network cable/Wi-Fi indicators. Ask the user to check the printer without opening panels."
+      ],
+      [
+        "Check approved network reachability",
+        "Use the managed printer portal or print-server status to determine whether the device is reachable. Do not change printer network settings."
+      ],
+      [
+        "Refresh the user’s queue safely",
+        "Confirm the correct queue and default printer; clear only the affected user’s stuck jobs with their permission and refresh the queue."
+      ],
+      [
+        "Route shared-device faults to print support",
+        "Capture printer asset/name, location, panel error, and affected users for the print or network team."
+      ]
+    ],
+    "root": "The shared printer had lost network connectivity, causing the print queue to report it as offline.",
+    "resolution": "Print support restored the printer’s managed network connection and refreshed the shared queue.",
+    "verification": [
+      "Confirm the printer reports ready/online",
+      "Print a small approved test page",
+      "Check that the user’s normal queue remains available"
+    ],
+    "prevention": [
+      "Report printer panel or connectivity warnings promptly",
+      "Use the correct shared print queue",
+      "Keep printer network reservations and firmware managed"
+    ],
+    "tools": [
+      "Windows Printers & scanners",
+      "Print server console",
+      "Printer control panel",
+      "Network monitoring"
+    ],
+    "skills": [
+      "Print support",
+      "Network triage",
+      "User communication"
+    ],
+    "tree": [
+      [
+        "Do other users see the printer offline?",
+        "Yes: check printer panel, network, and shared print service. No: inspect the user’s queue and workstation."
+      ],
+      [
+        "Is the printer reachable in the managed print portal?",
+        "No: escalate printer/network connectivity. Yes: refresh the affected queue and verify the driver."
+      ],
+      [
+        "Does a test page print?",
+        "Yes: have the user retry their job. No: capture queue and panel errors for print support."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "09",
+    "title": "Printer Not Printing Despite Queue",
+    "category": "Printers",
+    "iconName": "Printer",
+    "emoji": "📄",
+    "difficulty": "Intermediate",
+    "device": "Windows / Printer",
+    "time": "20–35 min",
+    "description": "Print jobs appear in the queue but pages never come out of the printer.",
+    "problem": "The user submits jobs to a printer queue, but output is not produced.",
+    "symptoms": [
+      "Jobs remain pending, disappear without printing, or show an error",
+      "Printer is online but does not produce pages",
+      "A test page may behave differently from the user’s document"
+    ],
+    "causes": [
+      "Paused queue or stuck print spooler",
+      "Paper, toner, jam, or finishing warning",
+      "Incorrect driver, port, or queue selection",
+      "Print server or application-specific job issue"
+    ],
+    "steps": [
+      [
+        "Determine whether one user or many are affected",
+        "Check whether a test page and another user’s job print. Confirm the selected printer and whether the document is specific."
+      ],
+      [
+        "Check printer status and supplies",
+        "Review the printer panel for paper, toner, jam, or tray warnings. Ask the user not to reach into moving parts or open service panels."
+      ],
+      [
+        "Inspect the queue",
+        "Check for paused status, error details, and stuck jobs. With user approval, cancel only the affected jobs and resubmit a small test."
+      ],
+      [
+        "Check driver and server health",
+        "Use the managed queue and driver; check print-server status with print support. Avoid restarting shared services without authorization."
+      ],
+      [
+        "Escalate persistent job failures",
+        "Capture job time, application, queue name, error, and test results for print support."
+      ]
+    ],
+    "root": "A stuck job or printer-side supply/paper alert was holding the queue before it could process new output.",
+    "resolution": "Print support cleared the confirmed blockage and restored the printer’s ready state; the user resubmitted the document after a successful test page.",
+    "verification": [
+      "Print a small test page from Windows",
+      "Print a brief test from the original application",
+      "Confirm no old jobs remain stuck"
+    ],
+    "prevention": [
+      "Check printer readiness before resubmitting large jobs",
+      "Choose the correct tray and shared queue",
+      "Report repeating spooler or server errors"
+    ],
+    "tools": [
+      "Windows print queue",
+      "Print server tools",
+      "Printer control panel",
+      "Event Viewer"
+    ],
+    "skills": [
+      "Print queue triage",
+      "Driver troubleshooting",
+      "Service escalation"
+    ],
+    "tree": [
+      [
+        "Does a Windows test page print?",
+        "Yes: investigate the original application or document. No: continue queue and printer checks."
+      ],
+      [
+        "Is there a panel warning or supply issue?",
+        "Yes: follow approved consumable guidance or route for service. No: inspect the managed queue and server."
+      ],
+      [
+        "Does clearing the affected job resolve printing?",
+        "Yes: verify a fresh test. No: record error details and escalate to print support."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "10",
+    "title": "User Cannot Login to Windows",
+    "category": "Identity & Access",
+    "iconName": "LockKeyhole",
+    "emoji": "🔑",
+    "difficulty": "Intermediate",
+    "device": "Windows / Entra ID",
+    "time": "15–30 min",
+    "description": "A user is unable to authenticate to their Windows device or account.",
+    "problem": "The user cannot sign in to Windows using their assigned work account.",
+    "symptoms": [
+      "Incorrect password or credentials message",
+      "Sign-in loop, temporary profile, or account restriction notice",
+      "Device is offline or not reaching the organization sign-in service"
+    ],
+    "causes": [
+      "Incorrect username, keyboard layout, or stale credential",
+      "Expired password, locked account, or disabled account",
+      "Network, domain-controller, or device trust issue",
+      "Conditional-access or device-compliance restriction"
+    ],
+    "steps": [
+      [
+        "Verify the user and exact error",
+        "Confirm identity using the organization’s approved verification process before discussing account details. Record the full error and sign-in context."
+      ],
+      [
+        "Check simple sign-in conditions",
+        "Verify username format, keyboard layout, Caps Lock, network connection, and whether the issue is at the Windows device or another service."
+      ],
+      [
+        "Check account and service status",
+        "Using authorized tools, verify account enabled/locked/expired status and identity-service health. Never ask the user to disclose their password."
+      ],
+      [
+        "Follow approved recovery",
+        "Use the organization’s verified self-service or admin reset/unlock workflow. For domain/device trust errors, follow endpoint escalation procedures."
+      ],
+      [
+        "Escalate access-policy failures",
+        "Capture correlation or sign-in log details and route device-compliance, conditional-access, or directory issues to identity administration."
+      ]
+    ],
+    "root": "The account was locked after repeated failed sign-ins; the lockout status was confirmed in the authorized directory console.",
+    "resolution": "After verifying the user’s identity, support unlocked the account using the approved process and helped the user sign in with their own credentials.",
+    "verification": [
+      "User signs in successfully on the affected device",
+      "Confirm no lockout or policy error returns",
+      "Check with the user that required work resources are accessible"
+    ],
+    "prevention": [
+      "Use approved password-manager and self-service tools",
+      "Report repeated or unexpected sign-in prompts",
+      "Never share passwords or verification codes with support"
+    ],
+    "tools": [
+      "Windows sign-in diagnostics",
+      "Entra ID / AD admin console (authorized)",
+      "Sign-in logs",
+      "Company Portal"
+    ],
+    "skills": [
+      "Identity verification",
+      "Windows authentication",
+      "Secure support"
+    ],
+    "tree": [
+      [
+        "Has the user’s identity been verified through approved channels?",
+        "No: stop and complete verification before account action. Yes: continue with the exact sign-in error."
+      ],
+      [
+        "Is the account locked, disabled, or expired?",
+        "Yes: follow the documented authorized workflow. No: investigate connectivity, device trust, and sign-in policy."
+      ],
+      [
+        "Does the issue persist after approved recovery?",
+        "Yes: collect sign-in error/correlation details and escalate. No: verify device and app access."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "11",
+    "title": "Password Reset Request",
+    "category": "Identity & Access",
+    "iconName": "ShieldCheck",
+    "emoji": "🔐",
+    "difficulty": "Easy",
+    "device": "Work account",
+    "time": "10–20 min",
+    "description": "A user needs a secure password reset or help using self-service recovery.",
+    "problem": "The user cannot authenticate and requests assistance resetting their work password.",
+    "symptoms": [
+      "Password rejected or expired",
+      "Self-service reset cannot verify the user",
+      "Updated password is not accepted on one or more devices"
+    ],
+    "causes": [
+      "Expired or mistyped password",
+      "Self-service recovery methods are outdated",
+      "Account lockout or sign-in risk restriction",
+      "Cached credentials on a managed device"
+    ],
+    "steps": [
+      [
+        "Verify identity before any reset",
+        "Use the organization’s documented identity-verification procedure. Do not rely on caller ID or ask for the existing password or MFA code."
+      ],
+      [
+        "Check eligibility and account status",
+        "Using authorized tools, confirm account state and whether self-service reset is available. Check for security or risk holds."
+      ],
+      [
+        "Use approved self-service first",
+        "Guide the user to the official company password-reset portal. Never send reset links to an unverified address."
+      ],
+      [
+        "Perform an authorized admin reset if needed",
+        "Follow least-privilege reset procedure, require a user-chosen secret at next sign-in where policy requires, and communicate through an approved secure channel."
+      ],
+      [
+        "Help refresh managed sign-ins",
+        "After the user changes their password, guide them through approved device and app reauthentication; do not collect or enter their password."
+      ]
+    ],
+    "root": "The account password had expired and the user’s registered self-service recovery method needed updating.",
+    "resolution": "The user completed the organization’s verified self-service recovery and updated their recovery methods after signing in.",
+    "verification": [
+      "User signs in using their new password without disclosing it",
+      "Confirm required MFA and work applications function",
+      "Check that the account is not immediately relocked"
+    ],
+    "prevention": [
+      "Register and maintain approved recovery methods",
+      "Use the official self-service password reset portal",
+      "Never share passwords or MFA codes, even with support"
+    ],
+    "tools": [
+      "Approved SSPR portal",
+      "Authorized directory console",
+      "Identity verification workflow",
+      "Sign-in logs"
+    ],
+    "skills": [
+      "Secure identity verification",
+      "Password recovery",
+      "User education"
+    ],
+    "tree": [
+      [
+        "Can identity be verified via the approved process?",
+        "No: do not reset; direct the requester to the documented verification channel. Yes: continue."
+      ],
+      [
+        "Can the user use official self-service recovery?",
+        "Yes: guide them to the company portal. No: check account status and follow authorized admin reset procedure."
+      ],
+      [
+        "Does sign-in still fail after recovery?",
+        "Yes: investigate lockout, MFA, cached credentials, and risk policy without collecting secrets. No: confirm recovery methods."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "12",
+    "title": "Active Directory Account Locked",
+    "category": "Identity & Access",
+    "iconName": "LockKeyhole",
+    "emoji": "🛡️",
+    "difficulty": "Intermediate",
+    "device": "Active Directory",
+    "time": "15–30 min",
+    "description": "A repeatedly locked directory account prevents access to workplace resources.",
+    "problem": "An Active Directory account is repeatedly locked, interrupting user access.",
+    "symptoms": [
+      "User receives account-locked messages across services",
+      "Unlocking temporarily restores access, then lockout returns",
+      "Authentication failures may occur while user is away"
+    ],
+    "causes": [
+      "Stale credentials saved on a device or service",
+      "Mapped drive, scheduled task, or mobile app retrying an old password",
+      "Repeated incorrect sign-in attempts",
+      "Potential suspicious sign-in activity"
+    ],
+    "steps": [
+      [
+        "Verify the user and confirm lockout scope",
+        "Complete approved identity verification and determine which services/devices are affected. Do not repeatedly unlock without investigating."
+      ],
+      [
+        "Check lockout events using authorized tools",
+        "Review domain-controller lockout logs and approved account lockout tools for timestamps and source workstation."
+      ],
+      [
+        "Identify stale credentials safely",
+        "Check the identified device’s Credential Manager and approved services, scheduled tasks, mapped drives, or mobile clients with the user/IT owner."
+      ],
+      [
+        "Assess security indicators",
+        "If source, time, or behavior is unexpected, preserve logs and follow the security incident process before clearing credentials."
+      ],
+      [
+        "Remove the confirmed cause and unlock",
+        "After addressing the source and following approval, unlock once using authorized directory tooling and monitor for recurrence."
+      ]
+    ],
+    "root": "A saved credential on a mapped resource repeatedly retried an outdated password and triggered the directory lockout policy.",
+    "resolution": "The stale saved credential was removed from the confirmed source. Authorized support unlocked the account and monitored for repeat failures.",
+    "verification": [
+      "User authenticates to required services",
+      "Check for new lockout events after the source is corrected",
+      "Confirm the user recognizes recent sign-in activity"
+    ],
+    "prevention": [
+      "Update saved credentials when passwords change",
+      "Review unattended devices and service accounts",
+      "Escalate unrecognized authentication activity promptly"
+    ],
+    "tools": [
+      "Active Directory Users and Computers",
+      "Domain-controller security logs",
+      "Account lockout tools (authorized)",
+      "Endpoint management"
+    ],
+    "skills": [
+      "Active Directory support",
+      "Log analysis",
+      "Security-aware triage"
+    ],
+    "tree": [
+      [
+        "Is the lockout source familiar and expected?",
+        "No: preserve evidence and follow the security incident process. Yes: continue to isolate the source."
+      ],
+      [
+        "Do logs identify a workstation or service?",
+        "Yes: check its saved credentials, tasks, and mapped resources with the owner. No: gather additional authorized sign-in telemetry."
+      ],
+      [
+        "Does lockout stop after the credential source is corrected?",
+        "Yes: unlock once and monitor. No: do not loop unlocks; escalate to directory/security operations."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "13",
+    "title": "Mapped Drive Not Accessible",
+    "category": "Networking",
+    "iconName": "HardDrive",
+    "emoji": "📁",
+    "difficulty": "Intermediate",
+    "device": "Windows / File server",
+    "time": "15–30 min",
+    "description": "A mapped network drive is missing, unavailable, or showing an access error.",
+    "problem": "A user cannot reach a mapped company file share from Windows.",
+    "symptoms": [
+      "Mapped drive shows a red X or is absent",
+      "Access denied or network path not found",
+      "Share works for colleagues or from another network location"
+    ],
+    "causes": [
+      "VPN or office network not connected",
+      "File server/share unavailable",
+      "Expired credentials or changed permissions",
+      "Stale drive mapping or DNS issue"
+    ],
+    "steps": [
+      [
+        "Confirm share, user, and scope",
+        "Record the approved share path, exact error, affected user, network location, and whether colleagues can access it."
+      ],
+      [
+        "Check required network access",
+        "Confirm the user is on the corporate network or approved VPN and that other company resources work."
+      ],
+      [
+        "Test server and name resolution",
+        "Use approved tools to check the file service and server name. Determine whether the issue is connectivity, name resolution, or access denied."
+      ],
+      [
+        "Verify access and refresh the mapping",
+        "Ask the share owner or authorized administrator to confirm permissions. Reconnect using the documented managed mapping; do not broaden access."
+      ],
+      [
+        "Escalate server-side faults",
+        "Provide the share path, error, timestamps, and user/device details to file services or network support."
+      ]
+    ],
+    "root": "The user was outside the corporate network without the approved VPN connection needed to reach the file server.",
+    "resolution": "The user reconnected through the approved corporate VPN and reopened the managed drive mapping.",
+    "verification": [
+      "Open the intended folder and a permitted file",
+      "Confirm read/write access matches the user’s role",
+      "Ensure the mapping reconnects after sign-in if policy requires"
+    ],
+    "prevention": [
+      "Use the approved VPN when working remotely",
+      "Request access through the share owner, not informal workarounds",
+      "Use managed drive mappings and report outages"
+    ],
+    "tools": [
+      "File Explorer",
+      "Approved VPN client",
+      "nslookup",
+      "File server tools (authorized)"
+    ],
+    "skills": [
+      "File-share troubleshooting",
+      "VPN/network triage",
+      "Access control"
+    ],
+    "tree": [
+      [
+        "Is the user on the approved corporate network or VPN?",
+        "No: connect using the managed VPN and retest. Yes: continue to server reachability."
+      ],
+      [
+        "Does the share path resolve and respond?",
+        "No: investigate DNS, VPN routing, or file-service availability. Yes: check user permissions."
+      ],
+      [
+        "Is access denied?",
+        "Yes: route to the share owner for least-privilege permission review. No: refresh the managed mapping and verify."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "14",
+    "title": "VPN Connection Failure",
+    "category": "Networking",
+    "iconName": "Network",
+    "emoji": "🔒",
+    "difficulty": "Intermediate",
+    "device": "Remote access VPN",
+    "time": "20–40 min",
+    "description": "The managed VPN client fails to connect or disconnects shortly after connecting.",
+    "problem": "The user cannot establish or maintain an approved remote-access VPN session.",
+    "symptoms": [
+      "Authentication, certificate, or gateway error",
+      "Connection stalls or disconnects repeatedly",
+      "VPN connects but internal work resources remain unavailable"
+    ],
+    "causes": [
+      "VPN service incident or network restriction",
+      "MFA, account, certificate, or device-compliance issue",
+      "Outdated managed VPN client",
+      "Conflicting network state or home-router issue"
+    ],
+    "steps": [
+      [
+        "Capture error and scope",
+        "Record the exact error, time, client version, network type, and whether other approved services work. Check VPN service status."
+      ],
+      [
+        "Verify account and device posture",
+        "Confirm the user can complete approved MFA and that the managed device is compliant. Never request an MFA code."
+      ],
+      [
+        "Check client and network prerequisites",
+        "Use the managed app portal to confirm VPN client version. Test a permitted alternate network only when policy allows."
+      ],
+      [
+        "Retry using documented connection steps",
+        "Restart the client or device when appropriate and use the assigned gateway/profile. Do not disable security software or install unapproved VPN tools."
+      ],
+      [
+        "Escalate with diagnostics",
+        "Collect approved VPN logs, error codes, and device compliance details for network or identity operations."
+      ]
+    ],
+    "root": "The device’s VPN client was outdated and failed the organization’s managed connection requirements.",
+    "resolution": "The current VPN client was installed from the company portal, then the user completed MFA and connected to the assigned gateway.",
+    "verification": [
+      "VPN reports connected with the expected profile",
+      "Open an approved internal resource",
+      "Confirm the connection remains stable during the user’s workflow"
+    ],
+    "prevention": [
+      "Keep the managed VPN client updated",
+      "Use the assigned gateway and MFA process",
+      "Report repeated disconnects with timestamps"
+    ],
+    "tools": [
+      "Company VPN client",
+      "Company Portal",
+      "Device compliance console",
+      "VPN service health"
+    ],
+    "skills": [
+      "Remote access support",
+      "MFA troubleshooting",
+      "Network diagnostics"
+    ],
+    "tree": [
+      [
+        "Is the VPN service experiencing an incident?",
+        "Yes: communicate the status and follow incident guidance. No: continue."
+      ],
+      [
+        "Does the user pass approved MFA and device-compliance checks?",
+        "No: route to identity or endpoint compliance support. Yes: inspect client version and connection logs."
+      ],
+      [
+        "Does the managed client connect but internal resources fail?",
+        "Yes: escalate routing/DNS policy to network operations. No: verify a successful session and retest."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "15",
+    "title": "Laptop Camera Not Working",
+    "category": "Hardware & Devices",
+    "iconName": "Laptop",
+    "emoji": "📷",
+    "difficulty": "Easy",
+    "device": "Laptop camera",
+    "time": "10–25 min",
+    "description": "The built-in or external camera is unavailable in a meeting or camera app.",
+    "problem": "The user cannot use the expected camera on their work laptop.",
+    "symptoms": [
+      "Camera missing, blocked, or showing a black preview",
+      "An app reports the camera is in use or unavailable",
+      "Camera works in one app but not another"
+    ],
+    "causes": [
+      "Physical privacy shutter or camera key is off",
+      "App camera permission or device selection issue",
+      "Another application is using the camera",
+      "Driver, firmware, or hardware failure"
+    ],
+    "steps": [
+      [
+        "Identify whether the camera is built-in or external",
+        "Ask which app, when the issue began, and whether a physical privacy shutter or camera indicator is present."
+      ],
+      [
+        "Check privacy and device selection",
+        "Open the physical shutter or function-key camera control; confirm the correct camera is selected in Windows and the meeting app."
+      ],
+      [
+        "Review Windows privacy permissions",
+        "Check camera permission for the intended app through Windows Settings and the organization’s privacy policy."
+      ],
+      [
+        "Test a second approved app and inspect device status",
+        "Close other meeting apps, test Windows Camera if permitted, and check Device Manager/OEM diagnostics for errors."
+      ],
+      [
+        "Update through managed support or escalate hardware",
+        "Use the approved driver/firmware update channel; route persistent missing devices or physical damage for repair."
+      ]
+    ],
+    "root": "The camera’s physical privacy shutter was closed, so Windows and meeting apps could not access the image.",
+    "resolution": "The user opened the integrated privacy shutter and selected the built-in camera in the meeting application.",
+    "verification": [
+      "Confirm a live preview in an approved camera app",
+      "Join a test meeting and verify the camera indicator",
+      "Check that the camera privacy setting remains user-controlled"
+    ],
+    "prevention": [
+      "Check the shutter and device selection before meetings",
+      "Keep camera drivers managed and current",
+      "Protect the lens and report hardware damage"
+    ],
+    "tools": [
+      "Windows Camera",
+      "Windows Privacy Settings",
+      "Device Manager",
+      "OEM diagnostics"
+    ],
+    "skills": [
+      "Peripheral support",
+      "Windows privacy",
+      "Meeting-room readiness"
+    ],
+    "tree": [
+      [
+        "Is the physical shutter or camera key off?",
+        "Yes: re-enable it and test preview. No: continue."
+      ],
+      [
+        "Does camera work in a second approved app?",
+        "Yes: inspect permissions and selection in the original app. No: check Windows privacy settings and Device Manager."
+      ],
+      [
+        "Does the device show a hardware error?",
+        "Yes: capture the device status and arrange repair. No: use managed driver support and verify."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "16",
+    "title": "Microphone Not Detected",
+    "category": "Hardware & Devices",
+    "iconName": "Activity",
+    "emoji": "🎙️",
+    "difficulty": "Easy",
+    "device": "Headset / Microphone",
+    "time": "10–25 min",
+    "description": "A headset or built-in microphone does not appear as an available input.",
+    "problem": "The user cannot select or use the expected microphone for calls or recordings.",
+    "symptoms": [
+      "Input device absent from app settings",
+      "No input level or microphone test response",
+      "App uses the wrong microphone or reports permission denied"
+    ],
+    "causes": [
+      "Muted headset, disconnected cable, or Bluetooth pairing issue",
+      "Incorrect input selection or app permission",
+      "Audio driver or Bluetooth service problem",
+      "Hardware fault or disabled device"
+    ],
+    "steps": [
+      [
+        "Clarify the microphone and app",
+        "Identify the built-in, USB, or Bluetooth microphone and whether it fails in one app or everywhere."
+      ],
+      [
+        "Check physical controls and connection",
+        "Confirm mute switch, cable/USB connection, battery, and Bluetooth pairing. Reconnect only after checking active calls."
+      ],
+      [
+        "Select the correct input and test it",
+        "In Windows sound settings and the meeting app, choose the intended input and observe the input-level meter."
+      ],
+      [
+        "Review app permissions and device status",
+        "Check Windows microphone privacy permission and Device Manager. Avoid changing enterprise audio policies."
+      ],
+      [
+        "Apply managed updates or test known-good hardware",
+        "Use approved audio/Bluetooth drivers and compare with a known-good headset; escalate persistent hardware faults."
+      ]
+    ],
+    "root": "The headset’s inline mute switch was enabled, leaving the selected microphone with no input.",
+    "resolution": "The user released the headset mute switch and selected the headset microphone as the input device.",
+    "verification": [
+      "Confirm the Windows input meter responds to speech",
+      "Make an approved test call and confirm clear two-way audio",
+      "Verify the app retains the correct input device"
+    ],
+    "prevention": [
+      "Check headset mute and battery before calls",
+      "Set the preferred device in meeting-app settings",
+      "Keep approved audio drivers and firmware current"
+    ],
+    "tools": [
+      "Windows Sound Settings",
+      "Meeting app device settings",
+      "Device Manager",
+      "OEM audio utility"
+    ],
+    "skills": [
+      "Audio troubleshooting",
+      "Peripheral configuration",
+      "End-user coaching"
+    ],
+    "tree": [
+      [
+        "Does Windows list the intended microphone?",
+        "No: check cable, pairing, mute, and Device Manager. Yes: select it and test input level."
+      ],
+      [
+        "Does the Windows input meter respond?",
+        "No: inspect physical mute, permission, and driver. Yes: check the meeting app’s selected input and permission."
+      ],
+      [
+        "Does a known-good headset work?",
+        "Yes: isolate the original headset. No: investigate managed audio drivers or endpoint hardware."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "17",
+    "title": "Second Monitor Not Detected",
+    "category": "Hardware & Devices",
+    "iconName": "Monitor",
+    "emoji": "🖥️",
+    "difficulty": "Easy",
+    "device": "Laptop / External display",
+    "time": "10–25 min",
+    "description": "An external display remains blank or does not appear in display settings.",
+    "problem": "A laptop or desktop does not detect or display on a connected second monitor.",
+    "symptoms": [
+      "Monitor reports no signal",
+      "Windows does not show a second display",
+      "Display flickers or works only at a lower resolution"
+    ],
+    "causes": [
+      "Monitor input or power setting",
+      "Loose/damaged cable, adapter, or dock",
+      "Unsupported resolution or display mode",
+      "Graphics driver, dock firmware, or hardware issue"
+    ],
+    "steps": [
+      [
+        "Confirm display and connection details",
+        "Identify the monitor, cable, adapter, dock, and whether the setup worked previously."
+      ],
+      [
+        "Check power, input, and cable seating",
+        "Confirm monitor power and selected input, reseat both cable ends, and test a known-good compatible cable where available."
+      ],
+      [
+        "Check Windows display mode",
+        "Use Windows display settings to detect the display and select Extend/Duplicate. Start at a supported resolution and refresh rate."
+      ],
+      [
+        "Isolate dock, port, and monitor",
+        "Test one display at a time, use a direct laptop port if supported, or compare with a known-good monitor/dock."
+      ],
+      [
+        "Update managed graphics or dock firmware",
+        "Use OEM/organization-approved updates and escalate suspected port, dock, or monitor hardware failure."
+      ]
+    ],
+    "root": "The dock’s display cable was connected to an incompatible adapter port, preventing Windows from detecting the monitor.",
+    "resolution": "The display cable was connected to the dock’s supported video output and the correct monitor input was selected.",
+    "verification": [
+      "Confirm both displays appear in Windows display settings",
+      "Check the requested layout, resolution, and orientation",
+      "Reconnect the dock once to confirm the display returns"
+    ],
+    "prevention": [
+      "Use approved docks, cables, and adapters",
+      "Label workstation-specific video connections",
+      "Keep dock and graphics updates managed"
+    ],
+    "tools": [
+      "Windows Display Settings",
+      "Known-good cable/dock",
+      "OEM dock utility",
+      "Device Manager"
+    ],
+    "skills": [
+      "Display configuration",
+      "Dock troubleshooting",
+      "Hardware isolation"
+    ],
+    "tree": [
+      [
+        "Does the monitor show its own menu?",
+        "No: check monitor power or hardware. Yes: verify selected input and cable."
+      ],
+      [
+        "Does a direct connection work?",
+        "Yes: isolate dock, adapter, or cable. No: inspect port, graphics settings, and driver."
+      ],
+      [
+        "Does Windows detect the display after a managed update?",
+        "Yes: verify arrangement and resolution. No: document hardware tested and escalate."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "18",
+    "title": "USB Device Not Recognized",
+    "category": "Hardware & Devices",
+    "iconName": "Usb",
+    "emoji": "🔌",
+    "difficulty": "Intermediate",
+    "device": "Windows / USB device",
+    "time": "15–30 min",
+    "description": "A USB accessory or storage device fails to appear or prompts an error.",
+    "problem": "Windows does not recognize a connected USB device or cannot use its expected function.",
+    "symptoms": [
+      "USB notification reports an unrecognized device",
+      "Device absent from File Explorer or Device Manager",
+      "Device connects intermittently or only on one port"
+    ],
+    "causes": [
+      "Cable, connector, or device power problem",
+      "USB controller or device driver fault",
+      "Device incompatibility or policy restriction",
+      "Hardware failure"
+    ],
+    "steps": [
+      [
+        "Identify the device and business purpose",
+        "Confirm device type, owner, whether it contains data, and whether it is approved for company use."
+      ],
+      [
+        "Check physical connection safely",
+        "Inspect for visible damage, try a known-good approved cable/port, and avoid hubs when isolating power issues."
+      ],
+      [
+        "Check Windows device status",
+        "Review Device Manager for error codes and Windows notifications. Do not format a storage device or ignore security prompts."
+      ],
+      [
+        "Compare a known-good port/device",
+        "Test with a known-good approved accessory and, if permitted, compare the original device on another managed computer."
+      ],
+      [
+        "Apply policy-approved driver support or escalate",
+        "Use managed driver updates; route unknown/unapproved storage or suspected hardware failure to security or endpoint support."
+      ]
+    ],
+    "root": "A damaged USB cable caused intermittent enumeration, so Windows could not maintain a stable connection to the accessory.",
+    "resolution": "The damaged cable was replaced with an organization-approved cable and the device was reconnected to a direct USB port.",
+    "verification": [
+      "Confirm the correct device appears without warnings",
+      "Test its expected function or read-only access as appropriate",
+      "Reconnect once and confirm stable detection"
+    ],
+    "prevention": [
+      "Use approved accessories and cables",
+      "Avoid damaged connectors and unsupported hubs",
+      "Never format or copy data from unknown devices without authorization"
+    ],
+    "tools": [
+      "Device Manager",
+      "Approved known-good cable",
+      "Endpoint management",
+      "Windows device notifications"
+    ],
+    "skills": [
+      "Peripheral triage",
+      "Device Manager",
+      "Security-aware support"
+    ],
+    "tree": [
+      [
+        "Is the device approved for company use?",
+        "No or unknown: stop and check policy/security before connecting. Yes: continue."
+      ],
+      [
+        "Does a known-good cable/port detect it?",
+        "Yes: replace the faulty connection component. No: check Device Manager and device policy."
+      ],
+      [
+        "Is it a storage device with important data?",
+        "Yes: do not format; preserve data and escalate. No: use managed driver support or hardware service."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "19",
+    "title": "Windows Update Failure",
+    "category": "Windows",
+    "iconName": "Activity",
+    "emoji": "🔄",
+    "difficulty": "Intermediate",
+    "device": "Windows 10 / 11",
+    "time": "20–45 min",
+    "description": "A managed Windows update fails, rolls back, or remains pending.",
+    "problem": "Windows Update cannot install an expected update on the user’s device.",
+    "symptoms": [
+      "Update error code or repeated retry",
+      "Installation stuck or rolled back after restart",
+      "Device remains behind the organization’s update baseline"
+    ],
+    "causes": [
+      "Insufficient free space or interrupted restart",
+      "Update service or component-store issue",
+      "Network, proxy, or management-policy restriction",
+      "Driver incompatibility or pending reboot"
+    ],
+    "steps": [
+      [
+        "Record the error and update context",
+        "Capture the KB/update ID, exact error code, time, device build, and whether a restart is pending."
+      ],
+      [
+        "Check managed update status and service health",
+        "Review endpoint-management compliance and update-ring status; confirm whether the issue affects multiple devices."
+      ],
+      [
+        "Check prerequisites and available storage",
+        "Confirm power, network, free space, and pending restart. Do not delete system files or disable endpoint security."
+      ],
+      [
+        "Use supported Windows remediation",
+        "Run the organization-approved troubleshooter or repair workflow and retry through the managed update channel."
+      ],
+      [
+        "Escalate repeated or fleet-wide failures",
+        "Provide update IDs, error codes, device build, and management status to endpoint engineering."
+      ]
+    ],
+    "root": "The device lacked sufficient free disk space to stage the cumulative update successfully.",
+    "resolution": "Approved temporary files were removed using Windows storage cleanup after user data was checked, and the managed update installed on retry.",
+    "verification": [
+      "Confirm update history shows successful installation",
+      "Verify the device reports compliant in management",
+      "Check that normal startup and required apps still work"
+    ],
+    "prevention": [
+      "Maintain reasonable free storage capacity",
+      "Restart devices when prompted by managed updates",
+      "Monitor compliance deadlines and report repeat errors"
+    ],
+    "tools": [
+      "Windows Update history",
+      "Endpoint management console",
+      "Windows Update troubleshooter",
+      "Storage Settings"
+    ],
+    "skills": [
+      "Patch management",
+      "Windows diagnostics",
+      "Change awareness"
+    ],
+    "tree": [
+      [
+        "Is the device managed and receiving the correct update ring?",
+        "No: route policy/enrollment to endpoint administration. Yes: continue."
+      ],
+      [
+        "Is there a pending restart or low storage?",
+        "Yes: address safely and retry the managed update. No: capture error code and check update service status."
+      ],
+      [
+        "Do multiple devices show the same failure?",
+        "Yes: escalate as a deployment issue. No: collect device-specific logs for endpoint engineering."
+      ]
+    ],
+    "images": []
+  },
+  {
+    "id": "20",
+    "title": "Company Software Installation Failed",
+    "category": "Software & Apps",
+    "iconName": "BriefcaseBusiness",
+    "emoji": "📦",
+    "difficulty": "Intermediate",
+    "device": "Managed Windows device",
+    "time": "20–40 min",
+    "description": "An approved company application fails to install from the managed software portal.",
+    "problem": "The user cannot install or update an application provided by the organization.",
+    "symptoms": [
+      "Company Portal reports a failed installation",
+      "Installer exits with an error or rolls back",
+      "App installs but will not launch"
+    ],
+    "causes": [
+      "Device not synced, compliant, or assigned the app",
+      "Insufficient storage or pending restart",
+      "Installer dependency, version conflict, or detection-rule issue",
+      "Network or software deployment service interruption"
+    ],
+    "steps": [
+      [
+        "Confirm the app and approved source",
+        "Verify the exact app/version and that it is assigned to the user/device in the company’s software catalog."
+      ],
+      [
+        "Capture the error and deployment status",
+        "Record the portal status, error code, time, device name, and whether other users report the same issue."
+      ],
+      [
+        "Check device prerequisites",
+        "Confirm management sync, compliance, available storage, network access, and pending restart without bypassing policy."
+      ],
+      [
+        "Retry using the managed deployment workflow",
+        "Sync the company portal and retry once after prerequisites are met. Avoid downloading installers from third-party sites or using admin credentials outside policy."
+      ],
+      [
+        "Escalate packaging or assignment issues",
+        "Send deployment logs and error details to endpoint/software packaging support if a managed retry fails."
+      ]
+    ],
+    "root": "The application was not assigned to the user’s device in endpoint management, so the portal could not install it.",
+    "resolution": "The application owner approved the required assignment; endpoint management synced the device and deployed the app through Company Portal.",
+    "verification": [
+      "Company Portal reports installation complete",
+      "Launch the app and sign in using the approved account",
+      "Confirm the installed version matches the approved release"
+    ],
+    "prevention": [
+      "Request software through the approved catalog",
+      "Keep device enrollment and sync healthy",
+      "Report repeat installation failures with app/version and error code"
+    ],
+    "tools": [
+      "Company Portal",
+      "Endpoint management console",
+      "Windows event logs",
+      "Software deployment logs"
+    ],
+    "skills": [
+      "Application deployment",
+      "Endpoint management",
+      "Software support"
+    ],
+    "tree": [
+      [
+        "Is the app available in the approved software catalog?",
+        "No: route a request through the app owner and approval workflow. Yes: continue."
+      ],
+      [
+        "Is the device managed, compliant, and synced?",
+        "No: resolve enrollment/compliance through endpoint support. Yes: review assignment and installer status."
+      ],
+      [
+        "Does a managed retry fail with the same error?",
+        "Yes: preserve deployment logs and escalate to packaging support. No: launch and verify the approved version."
+      ]
+    ],
+    "images": []
+  }
+]
