@@ -170,7 +170,8 @@ export async function handleApi(route: Route, request: Request, context: ApiCont
       return json(409, { error: "These cases were changed somewhere else (another tab or device) after you opened them. Reload the page to get the latest version, then make your edit again." });
     }
     console.error(`[api/${route}]`, error);
-    return json(500, { error: "Saving failed on the server. Please try again in a moment." });
+    const action = request.method === "GET" ? "Loading" : "Saving";
+    return json(500, { error: `${action} failed on the server. If this keeps happening, check that the project's Blob storage is connected.` });
   }
 }
 
